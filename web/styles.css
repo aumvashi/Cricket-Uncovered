@@ -1,0 +1,178 @@
+/* Reset some basic styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+nav,
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Basic body styling */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header and navigation styling */
+header {
+  background: #004d40;
+  color: #fff;
+  padding: 15px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo a {
+  color: #ffeb3b;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffeb3b;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+.nav-links a:hover {
+  color: #ffeb3b;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.auth-links a {
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  margin-left: 10px;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.auth-links .login:hover {
+  background: #fff;
+  color: #004d40;
+}
+
+.auth-links .signup {
+  background: #ffeb3b;
+  color: #004d40;
+}
+
+.auth-links .signup:hover {
+  background: #fff;
+  color: #004d40;
+}
+
+/* Main section styling */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.dashboard {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.form-section {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background: #004d40;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #00332b;
+}
+
+/* Admin table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background: #004d40;
+  color: #fff;
+}
+
+/* Footer styling */
+footer {
+  background: #004d40;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 14px;
+}
