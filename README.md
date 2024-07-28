@@ -19,16 +19,10 @@ Cricket Uncovered is an advanced cricket analysis tool designed to provide deep 
 ## Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
+- **Database**: Firebase
 - **Data Visualization**: Power BI
 
 ## Installation
-
-### Prerequisites
-
-- Node.js and npm
-- MongoDB
 
 ### Steps
 
