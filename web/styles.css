@@ -18,9 +18,17 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #f4f4f4;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Header and navigation styling */
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   background: #004d40;
   color: #fff;
@@ -106,6 +114,7 @@ main {
   margin: 40px auto;
   padding: 0 20px;
   text-align: center;
+  flex: 1;
 }
 
 .dashboard {
@@ -173,6 +182,67 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
-  margin-top: 40px;
+  margin-top: auto;
   font-size: 14px;
+}
+/* Home Section Styling */
+.home-container,
+.about-container,
+.contact-container {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.home-container h2,
+.about-container h2,
+.contact-container h2 {
+  color: #004d40;
+  margin-bottom: 20px;
+}
+
+.home-container p,
+.about-container p,
+.contact-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.contact-container p strong {
+  color: #004d40;
+}
+
+/* Social Links Styling */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #004d40;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ffeb3b;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBMnd6HwzBFO4rBLfiI-1od7Dug-CLOwsk",
+        authDomain: "cricket-uncovered.firebaseapp.com",
+        projectId: "cricket-uncovered",
+        storageBucket: "cricket-uncovered.appspot.com",
+        messagingSenderId: "493666998942",
+        appId: "1:493666998942:web:a96464d1304d261da0b98f",
+        measurementId: "G-GGM1FB9Q43",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cricket Uncovered</title>
@@ -8,127 +31,223 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <a href="#" onclick="showSection('home')">Cricket Uncovered</a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="#" onclick="showSection('home')">Home</a></li>
-          <li><a href="#" onclick="showSection('about')">About</a></li>
-          <li><a href="#" onclick="showSection('contact')">Contact</a></li>
-          <li id="dashboard-link" style="display: none">
-            <a href="#" onclick="showSection('dashboard')">Dashboard</a>
-          </li>
-        </ul>
-        <div class="auth-links">
-          <a href="#" class="login" onclick="showSection('login-form')"
-            >Login</a
-          >
-          <a href="#" class="signup" onclick="showSection('signup-form')"
-            >Sign Up</a
-          >
-        </div>
-      </nav>
-    </header>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <div class="logo">
+            <a href="#" onclick="showSection('home')">Cricket Uncovered</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            <li id="dashboard-link" style="display: none">
+              <a href="#" onclick="showSection('dashboard')">Dashboard</a>
+            </li>
+          </ul>
+          <div class="auth-links">
+            <a href="#" class="login" onclick="showSection('login-form')"
+              >Login</a
+            >
+            <a href="#" class="signup" onclick="showSection('signup-form')"
+              >Sign Up</a
+            >
+          </div>
+        </nav>
+      </header>
 
-    <main>
-      <section class="home" id="home">
-        <h2>Welcome to Cricket Uncovered</h2>
-        <p>Your ultimate cricket analysis tool.</p>
-      </section>
+      <main>
+        <section class="home" id="home">
+          <div class="home-container">
+            <h2>Welcome to Cricket Uncovered</h2>
+            <p>
+              Your ultimate cricket analysis tool. Dive deep into the world of
+              cricket with our comprehensive data analysis, which identifies the
+              best players in various categories. Whether you're looking for the
+              best opener, middle-order player, all-rounder, bowler, or the
+              final 11 players who excelled throughout the tournament, Cricket
+              Uncovered provides you with detailed insights and powerful
+              visualizations powered by Power BI.
+            </p>
+            <p>
+              Our platform leverages advanced data analytics to help you uncover
+              hidden patterns and trends in cricket performances. Explore player
+              statistics, compare performances, and make informed decisions
+              based on real data.
+            </p>
+            <p>
+              Join us on a journey to explore the nuances of cricket and
+              discover what makes the best players stand out. With Cricket
+              Uncovered, you'll have access to the most up-to-date and accurate
+              cricket analysis available.
+            </p>
+          </div>
+        </section>
 
-      <section class="about" id="about" style="display: none">
-        <h2>About Us</h2>
-        <p>Learn more about Cricket Uncovered.</p>
-      </section>
+        <section class="about" id="about" style="display: none">
+          <div class="about-container">
+            <h2>About Us</h2>
+            <p>
+              Welcome to Cricket Uncovered, your premier destination for cricket
+              analysis. Our mission is to provide cricket enthusiasts, analysts,
+              and professionals with the most accurate and insightful data
+              analysis of cricket performances.
+            </p>
+            <p>
+              Our platform is designed to analyze cricket data meticulously,
+              focusing on identifying the best players in key roles such as
+              openers, middle-order batsmen, all-rounders, bowlers, and the top
+              11 players of the tournament. We use advanced data analytics
+              techniques to break down player performances and present the
+              findings in an easy-to-understand and visually appealing format.
+            </p>
+            <p>
+              At Cricket Uncovered, we believe that data can tell powerful
+              stories. Our team comprises data scientists, cricket analysts, and
+              technology experts dedicated to bringing you the best cricket
+              analysis possible. Our visualizations, powered by Power BI, allow
+              you to explore the data interactively and gain deeper insights
+              into the game.
+            </p>
+            <p>
+              Whether you're a fan looking to understand the game better, a
+              coach aiming to improve team performance, or a player seeking to
+              refine your skills, Cricket Uncovered is here to provide the
+              insights you need.
+            </p>
+            <p>
+              Join us in our quest to uncover the hidden gems of cricket through
+              data analysis. Together, we can enhance our understanding of this
+              beautiful game.
+            </p>
+          </div>
+        </section>
 
-      <section class="contact" id="contact" style="display: none">
-        <h2>Contact Us</h2>
-        <p>Get in touch with us.</p>
-      </section>
+        <section class="contact" id="contact" style="display: none">
+          <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>
+              We'd love to hear from you! Whether you have questions, feedback,
+              or suggestions, please don't hesitate to reach out. Our team is
+              here to assist you and ensure you have the best experience with
+              Cricket Uncovered.
+            </p>
+            <p><strong>Email:</strong> support@cricketuncovered.com</p>
+            <p><strong>Phone:</strong> +91 9428168182</p>
+            <p><strong>Address:</strong> Parul University Limda Vadodara.</p>
+            <p>
+              Follow us on social media for the latest updates and insights:
+            </p>
+            <ul class="social-links">
+              <li>
+                <a
+                  href="https://www.facebook.com/cricketuncovered"
+                  target="_blank"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.twitter.com/cricketuncovered"
+                  target="_blank"
+                  >Twitter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/cricketuncovered"
+                  target="_blank"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/cricketuncovered"
+                  target="_blank"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+            <p>We look forward to connecting with you!</p>
+          </div>
+        </section>
 
-      <section class="dashboard" id="dashboard" style="display: none">
-        <h2>Cricket Dashboard</h2>
-        <iframe
-          width="800"
-          height="600"
-          src="https://app.powerbi.com/view?r=YourEmbedCodeHere"
-          frameborder="0"
-          allowfullscreen="true"
-        ></iframe>
-      </section>
+        <section class="form-section" id="login-form" style="display: none">
+          <h2>Login</h2>
+          <form id="login">
+            <input
+              type="text"
+              id="login-username"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="password"
+              id="login-password"
+              placeholder="Password"
+              required
+            />
+            <button type="submit">Login</button>
+          </form>
+        </section>
 
-      <section class="form-section" id="login-form" style="display: none">
-        <h2>Login</h2>
-        <form id="login">
-          <input
-            type="text"
-            id="login-username"
-            placeholder="Username"
-            required
-          />
-          <input
-            type="password"
-            id="login-password"
-            placeholder="Password"
-            required
-          />
-          <button type="submit">Login</button>
-        </form>
-      </section>
+        <section class="form-section" id="signup-form" style="display: none">
+          <h2>Sign Up</h2>
+          <form id="signup">
+            <input
+              type="text"
+              id="signup-username"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="password"
+              id="signup-password"
+              placeholder="Password"
+              required
+            />
+            <input
+              type="email"
+              id="signup-email"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="text"
+              id="signup-fullname"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              type="text"
+              id="signup-phone"
+              placeholder="Phone Number"
+              required
+            /><br />
+            <button type="submit">Sign Up</button>
+          </form>
+        </section>
 
-      <section class="form-section" id="signup-form" style="display: none">
-        <h2>Sign Up</h2>
-        <form id="signup">
-          <input
-            type="text"
-            id="signup-username"
-            placeholder="Username"
-            required
-          />
-          <input
-            type="password"
-            id="signup-password"
-            placeholder="Password"
-            required
-          />
-          <input type="email" id="signup-email" placeholder="Email" required />
-          <input
-            type="text"
-            id="signup-fullname"
-            placeholder="Full Name"
-            required
-          />
-          <input
-            type="text"
-            id="signup-phone"
-            placeholder="Phone Number"
-            required
-          />
-          <button type="submit">Sign Up</button>
-        </form>
-      </section>
-
-      <section class="form-section" id="admin-view" style="display: none">
-        <h2>Admin View</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Username</th>
-              <th>Email</th>
-              <th>Full Name</th>
-              <th>Phone</th>
-              <th>Password (Encrypted)</th>
-            </tr>
-          </thead>
-          <tbody id="admin-table-body"></tbody>
-        </table>
-      </section>
-    </main>
+        <section class="form-section" id="admin-view" style="display: none">
+          <h2>Admin View</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Full Name</th>
+                <th>Phone</th>
+                <th>Password (Encrypted)</th>
+              </tr>
+            </thead>
+            <tbody id="admin-table-body"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
 
     <footer>
-      <p>&copy; 2024 Cricket Uncovered. All rights reserved.</p>
+      <p>&copy; FOOTER.</p>
     </footer>
   </body>
 </html>

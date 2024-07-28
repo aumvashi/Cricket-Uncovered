@@ -11,25 +11,33 @@ function encryptPassword(password) {
 function displayAdminView() {
   const adminTableBody = document.getElementById("admin-table-body");
   adminTableBody.innerHTML = "";
-  users.forEach((user) => {
-    const row = document.createElement("tr");
-    const usernameCell = document.createElement("td");
-    const emailCell = document.createElement("td");
-    const fullnameCell = document.createElement("td");
-    const phoneCell = document.createElement("td");
-    const passwordCell = document.createElement("td");
-    usernameCell.textContent = user.username;
-    emailCell.textContent = user.email;
-    fullnameCell.textContent = user.fullname;
-    phoneCell.textContent = user.phone;
-    passwordCell.textContent = user.password;
-    row.appendChild(usernameCell);
-    row.appendChild(emailCell);
-    row.appendChild(fullnameCell);
-    row.appendChild(phoneCell);
-    row.appendChild(passwordCell);
-    adminTableBody.appendChild(row);
-  });
+  db.collection("users")
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        const user = doc.data();
+        const row = document.createElement("tr");
+        const usernameCell = document.createElement("td");
+        const emailCell = document.createElement("td");
+        const fullnameCell = document.createElement("td");
+        const phoneCell = document.createElement("td");
+        const passwordCell = document.createElement("td");
+        usernameCell.textContent = user.username;
+        emailCell.textContent = user.email;
+        fullnameCell.textContent = user.fullname;
+        phoneCell.textContent = user.phone;
+        passwordCell.textContent = user.password;
+        row.appendChild(usernameCell);
+        row.appendChild(emailCell);
+        row.appendChild(fullnameCell);
+        row.appendChild(phoneCell);
+        row.appendChild(passwordCell);
+        adminTableBody.appendChild(row);
+      });
+    })
+    .catch((error) => {
+      console.error("Error getting documents: ", error);
+    });
 }
 
 // Function to show specific section
@@ -67,18 +75,21 @@ document.getElementById("login").addEventListener("submit", function (event) {
     showSection("admin-view");
     displayAdminView();
   } else {
-    const user = users.find(
-      (user) =>
-        user.username === username &&
-        user.password === encryptPassword(password)
-    );
-    if (user) {
-      isLoggedIn = true;
-      alert("Login successful");
-      showSection("dashboard");
-    } else {
-      alert("Invalid username or password");
-    }
+    db.collection("users")
+      .doc(username)
+      .get()
+      .then((doc) => {
+        if (doc.exists && doc.data().password === encryptPassword(password)) {
+          isLoggedIn = true;
+          alert("Login successful");
+          showSection("dashboard");
+        } else {
+          alert("Invalid username or password");
+        }
+      })
+      .catch((error) => {
+        console.error("Error getting document: ", error);
+      });
   }
 });
 
@@ -91,18 +102,33 @@ document.getElementById("signup").addEventListener("submit", function (event) {
   const fullname = document.getElementById("signup-fullname").value;
   const phone = document.getElementById("signup-phone").value;
 
-  if (users.some((user) => user.username === username)) {
-    alert("Username already taken");
-  } else {
-    const encryptedPassword = encryptPassword(password);
-    users.push({
-      username,
-      password: encryptedPassword,
-      email,
-      fullname,
-      phone,
+  db.collection("users")
+    .doc(username)
+    .get()
+    .then((doc) => {
+      if (doc.exists) {
+        alert("Username already taken");
+      } else {
+        const encryptedPassword = encryptPassword(password);
+        db.collection("users")
+          .doc(username)
+          .set({
+            username,
+            password: encryptedPassword,
+            email,
+            fullname,
+            phone,
+          })
+          .then(() => {
+            alert("Sign up successful");
+            showSection("login-form");
+          })
+          .catch((error) => {
+            console.error("Error writing document: ", error);
+          });
+      }
+    })
+    .catch((error) => {
+      console.error("Error getting document: ", error);
     });
-    alert("Sign up successful");
-    showSection("login-form");
-  }
 });
