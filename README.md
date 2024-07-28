@@ -13,7 +13,7 @@ Cricket Uncovered is an advanced cricket analysis tool designed to provide deep 
 
 ## Screenshots
 
-![Home Page]<img width="959" alt="image" src="https://github.com/user-attachments/assets/b9dfa9e0-3f05-4eb9-885e-fc8009da9d9f">
+[Home Page]<img width="959" alt="image" src="https://github.com/user-attachments/assets/b9dfa9e0-3f05-4eb9-885e-fc8009da9d9f">
 
 ![Dashboard](screenshots/dashboard.png)
 
