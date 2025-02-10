@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Format Selection</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+  font-family: 'Arial', sans-serif;
+  background: url('./assets/bg.png') no-repeat center center fixed;
+  background-size: contain; /* Change to "cover" if you prefer */
+  background-color: black; /* Fallback color for blank spaces */
+  color: white;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .trophies {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    .trophy {
+      text-align: center;
+      transition: 0.5s;
+    }
+
+    .trophy img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+  }
+
+  .trophy:hover img {
+    transform: scale(1.2);
+  }
+
+  </style>
+</head>
+<body>
+  <h1>Select the Cricket Format</h1>
+  <div class="trophies">
+    <div class="trophy">
+        <a href="https://app.powerbi.com/reportEmbed?reportId=adab67db-a95e-4ecd-b3f4-116231033c7e&autoAuth=true&ctid=544be64c-02a6-4674-80e6-6b23d1d83bf3"><img src="./assets/t20 trophy.png" alt="T20 Trophy"></a>
+    </div>
+    <div class="trophy">
+        <a href="https://app.powerbi.com/reportEmbed?reportId=94256727-72c5-4c6c-a0cd-2f5652ab910c&autoAuth=true&ctid=544be64c-02a6-4674-80e6-6b23d1d83bf3"><img src="./assets/download.jpeg" alt="ODI Trophy"></a>
+    </div>
+  </div>
+</body>
+</html>
