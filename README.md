@@ -66,32 +66,32 @@ python data_processing.py
 ---
 
 ## 🎥 Project Execution
-### 🔹 Data Extraction
-(Add screenshot/video here)
-
-### 🔹 Data Cleaning & Processing
-(Add screenshot/video here)
 
 ### 🔹 Power BI Dashboard
-(Add screenshot/video here)
+![ODI Final XI](https://github.com/user-attachments/assets/a5ed862c-14eb-44b5-af1d-a8dc8cc8366e)
+![T20i Final XI](https://github.com/user-attachments/assets/ab7028c8-7f07-43fb-8a5e-cb55e6ef3149)
 
 ### 🔹 Final Web Dashboard
-(Add screenshot/video here)
+![Opening Page](https://github.com/user-attachments/assets/4d56dd2e-2967-4d9e-9f21-480d4717bbf6)
 
 ---
 
 ## 📌 System Architecture & Diagrams
 ### 1️⃣ ER Diagram
-![ER Diagram](path_to_er_diagram.png)
+![ER Diagram](![image](https://github.com/user-attachments/assets/4d56a11b-da57-4e26-be57-6d3010d2f9ef)
+)
 
 ### 2️⃣ Use Case Diagram
-![Use Case Diagram](path_to_use_case_diagram.png)
+![Use Case Diagram](![image](https://github.com/user-attachments/assets/07fc4777-1b0a-4299-88b1-b75f3f1c5f85)
+)
 
 ### 3️⃣ Data Flow Diagram (DFD)
-![DFD](path_to_dfd.png)
+![DFD](![image](https://github.com/user-attachments/assets/f49675ce-6616-4b4a-88d6-6d4f3de615a4)
+)
 
-### 4️⃣ Class Diagram
-![Class Diagram](path_to_class_diagram.png)
+### 4️⃣ Activity Diagram
+![Activity Diagram](![image](https://github.com/user-attachments/assets/9477f8be-c689-4b41-ae5f-383ff9f9eee9)
+)
 
 ---
 
@@ -121,12 +121,4 @@ Feel free to **fork** this repository and contribute! Steps to contribute:
 
 ---
 
-## 📜 License
-This project is licensed under the MIT License - see the **LICENSE** file for details.
 
----
-
-## 📬 Contact
-For any queries or collaborations:
-📧 Email: [your-email@example.com](mailto:your-email@example.com)
-🌐 Website: [your-website.com](https://your-website.com)
