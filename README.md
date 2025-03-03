@@ -78,21 +78,17 @@ python data_processing.py
 
 ## 📌 System Architecture & Diagrams
 ### 1️⃣ ER Diagram
-![ER Diagram](![image](https://github.com/user-attachments/assets/4d56a11b-da57-4e26-be57-6d3010d2f9ef)
-)
+![ER Diagram](https://github.com/user-attachments/assets/4d56a11b-da57-4e26-be57-6d3010d2f9ef)
 
 ### 2️⃣ Use Case Diagram
-![Use Case Diagram](![image](https://github.com/user-attachments/assets/07fc4777-1b0a-4299-88b1-b75f3f1c5f85)
-)
+![Use Case Diagram](https://github.com/user-attachments/assets/07fc4777-1b0a-4299-88b1-b75f3f1c5f85)
 
 ### 3️⃣ Data Flow Diagram (DFD)
-![DFD](![image](https://github.com/user-attachments/assets/f49675ce-6616-4b4a-88d6-6d4f3de615a4)
-)
+![DFD](https://github.com/user-attachments/assets/f49675ce-6616-4b4a-88d6-6d4f3de615a4)
+
 
 ### 4️⃣ Activity Diagram
-![Activity Diagram](![image](https://github.com/user-attachments/assets/9477f8be-c689-4b41-ae5f-383ff9f9eee9)
-)
-
+![Activity Diagram](https://github.com/user-attachments/assets/9477f8be-c689-4b41-ae5f-383ff9f9eee9)
 ---
 
 ## 📈 Power BI Dashboard Features
